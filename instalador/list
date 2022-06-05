@@ -25,9 +25,9 @@ dpkg-reconfigure --frontend noninteractive tzdata >/dev/null 2>&1
 [[ ! -e /etc/bot/lista_ativos ]] && touch /etc/bot/lista_ativos
 [[ ! -d /etc/bot ]] && mkdir /etc/rec
 [[ ! -e /etc/bot/lista_suspensos ]] && touch /etc/bot/lista_suspensos
-echo -e 'by: @Niltonjuniornzx' >/usr/lib/nzx && cat /usr/lib/nzx >$lst2/licence && cat /usr/lib/nzx > /etc/SSHPlus/.tmp/crazy
-echo -e 'by: @KIRITO_SSH' >/usr/lib/sshplus && cat /usr/lib/sshplus >$lst2/licence && cat /usr/lib/sshplus > /etc/SSHPlus/.tmp/crazy
-echo -e 'by: @KIRITO_SSH' >/etc/rec/licence && cat /etc/rec/licence >$lst2/licence && cat /etc/rec/licence > /etc/SSHPlus/.tmp/crazy
+echo -e 'by: @alexdias9421' >/usr/lib/nzx && cat /usr/lib/nzx >$lst2/licence && cat /usr/lib/nzx > /etc/SSHPlus/.tmp/crazy
+echo -e 'by: @alexdias9421' >/usr/lib/sshplus && cat /usr/lib/sshplus >$lst2/licence && cat /usr/lib/sshplus > /etc/SSHPlus/.tmp/crazy
+echo -e 'by: @alexdias9421' >/etc/rec/licence && cat /etc/rec/licence >$lst2/licence && cat /etc/rec/licence > /etc/SSHPlus/.tmp/crazy
 netstat -nplt | grep -w 'apache2' | grep -w '80' && sed -i "s/Listen 80/Listen 81/g" /etc/apache2/ports.conf && service apache2 restart
 [[ "$(grep -o '#Port 22' /etc/ssh/sshd_config)" == "#Port 22" ]] && sed -i "s;#Port 22;Port 22;" /etc/ssh/sshd_config && service ssh restart
 grep -v "^PasswordAuthentication" /etc/ssh/sshd_config >/tmp/passlogin && mv /tmp/passlogin /etc/ssh/sshd_config
